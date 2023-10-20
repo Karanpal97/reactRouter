@@ -8,7 +8,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/contact/contact';
 import User from './components/User/User';
-import Github from './components/Github/Github';
+import Github ,{GithubLoader} from './components/Github/Github';
+
 
 const router=createBrowserRouter([{
   path:"/",
@@ -24,14 +25,16 @@ const router=createBrowserRouter([{
     path:"Contact",
     element:<Contact/>
   },
-  { 
+  {
     path:"Github",
-     element:<Github/>
+    element:<Github/>,
+    loader:GithubLoader,
     },
      { 
     path:"/user/:userId",
      element:<User/>
     },
+
     
   ],
 
